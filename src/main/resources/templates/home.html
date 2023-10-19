@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Spring Cars</title>
+</head>
+<body>
+
+<h1>Spring cars</h1>
+
+<p>This is my spring cars website</p>
+
+<ul>
+    <li th:each="car : ${cars}" th:text='${car.getMake() + " " + car.getModel()}'></li>
+</ul>
+
+<form action="/" method="post">
+    <input type="text" name="make" id="make" placeholder="Make"> <br>
+    <input type="text" name="model" id="model" placeholder="Model"> <br>
+    <input type="number" name="year" id="year" placeholder="Year"> <br>
+    <input type="submit" value="Spara">
+</form>
+
+</body>
+</html>
